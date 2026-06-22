@@ -1,0 +1,41 @@
+.fab {
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem;
+  padding-right: 0.625rem;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-small);
+  background: rgba(19, 20, 40, 0.92);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 24px rgba(6, 8, 38, 0.35);
+}
+
+.fab:hover {
+  border-color: var(--color-border);
+  background: rgba(19, 20, 40, 1);
+}
+
+.thumbnail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: calc(var(--radius-small) - 2px);
+  background: radial-gradient(circle at 30% 30%, #5761ff 0%, #230842 70%);
+  color: var(--color-text);
+}
+
+.label {
+  padding-right: 0.125rem;
+}

@@ -1,0 +1,29 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-medium);
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+}
+
+.active .dot {
+  background: var(--color-success);
+}
+
+.inactive .dot {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.registered .dot {
+  background: var(--color-sandbox);
+}
+
+.label {
+  color: var(--color-text-muted);
+}

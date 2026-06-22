@@ -1,0 +1,1 @@
+export { DevicesListView } from './DevicesListView';

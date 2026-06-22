@@ -1,0 +1,1 @@
+export { DevicesMapCard } from './DevicesMapCard';

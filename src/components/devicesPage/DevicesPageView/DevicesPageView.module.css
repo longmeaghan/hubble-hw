@@ -1,0 +1,8 @@
+.mapSection {
+  margin-bottom: var(--spacing-gutter);
+}
+
+.mapSection :global(.card .mapBody) {
+  height: 18rem;
+  min-height: 18rem;
+}

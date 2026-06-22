@@ -1,0 +1,12 @@
+.content {
+  min-height: 16rem;
+  padding-bottom: 1.5rem;
+}
+
+.content[data-modal-phase='intro'] {
+  padding-bottom: 2rem;
+}
+
+.footer {
+  padding-bottom: 0.75rem;
+}

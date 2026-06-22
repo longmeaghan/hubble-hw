@@ -1,0 +1,127 @@
+/* Design tokens from design/DESIGN.md — tokens win over screenshot measurements */
+
+:root {
+  /* Colors */
+  --color-primary: #5761ff;
+  --color-secondary: #8c30dc;
+  --color-background: #060826;
+  --color-surface: #0a0f5c;
+  --color-sidebar: #401296;
+  --color-text: #ffffff;
+  --color-text-muted: #B8A4FA;
+  --color-accent-purple: #a04ae8;
+  --color-accent-blue: #272fa3;
+  --color-border: rgba(255, 255, 255, 0.2);
+  --color-border-subtle: rgba(255, 255, 255, 0.12);
+  --color-card-bg: rgba(19, 20, 40, 0.75);
+  --color-success: #4ade80;
+  --color-sandbox: #f59e0b;
+  --color-chart-line: #fbbf24;
+
+  /* Modal (light surface) */
+  --color-modal-bg: #f0eef6;
+  --color-modal-text: #060826;
+  --color-modal-text-muted: #475569;
+  --color-modal-border: rgba(6, 8, 38, 0.12);
+  --color-modal-overlay: rgba(6, 8, 38, 0.72);
+  --color-modal-step-inactive: #b8a4fa;
+  --color-modal-step-track: rgba(184, 164, 250, 0.35);
+  --radius-modal: 1.5rem;
+
+  /* Layering */
+  --z-index-map: 0;
+  --z-index-modal: 1000;
+  --z-index-modal-nested: 1100;
+
+  /* Typography */
+  --font-family: 'Instrument Sans', sans-serif;
+  --font-mono: 'Inconsolata', monospace;
+  --font-size-h1: clamp(1.75rem, 2.5vw, 2.25rem);
+  --font-size-h2: clamp(1.125rem, 1.5vw, 1.375rem);
+  --font-size-body-lg: 1.25rem;
+  --font-size-body-md: 1.125rem;
+  --font-size-body-sm: 0.875rem;
+  --font-size-eyebrow: 0.6875rem;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  /* Spacing */
+  --spacing-section: clamp(4rem, 7vw, 7rem);
+  --spacing-gutter: 1.5rem;
+  --spacing-container-max: 78rem;
+  --spacing-sidebar-width: 15.5rem;
+
+  /* Radii */
+  --radius-small: 0.5rem;
+  --radius-main: 1rem;
+  --radius-card: 20px;
+  --radius-pill: 100vw;
+
+  /* Components */
+  --button-primary-bg: var(--color-primary);
+  --button-primary-text: var(--color-text);
+  --button-primary-padding: 0.5em 1.5em;
+  --card-glass-bg: var(--color-card-bg);
+  --card-glass-border: 1px solid var(--color-border);
+
+  /* Gradients — main content area background */
+  --gradient-main: radial-gradient(
+    ellipse 120% 90% at 50% -15%,
+    #a85a88 20%,
+    #814db7 30%,
+    #673dbb 40%,
+    #230842 50%,
+    #230842 100%
+  );
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-background);
+  scrollbar-gutter: stable;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100%;
+  background: var(--color-background);
+  color-scheme: dark;
+  font-family: var(--font-family);
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.5;
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100%;
+  background: var(--color-background);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}

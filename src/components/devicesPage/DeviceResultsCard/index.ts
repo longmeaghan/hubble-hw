@@ -1,0 +1,1 @@
+export { DeviceResultsCard } from './DeviceResultsCard';
