@@ -2,8 +2,28 @@ import { useCallback, useEffect, useState } from 'react';
 
 export type AppRoute = 'dashboard' | 'devices';
 
+const BASE = import.meta.env.BASE_URL;
+
+function normalizePath(pathname: string): string {
+  if (BASE !== '/') {
+    if (pathname.startsWith(BASE)) {
+      const rest = pathname.slice(BASE.length);
+      return rest.startsWith('/') ? rest : `/${rest}`;
+    }
+
+    const baseWithoutTrailingSlash = BASE.replace(/\/$/, '');
+    if (pathname === baseWithoutTrailingSlash) {
+      return '/';
+    }
+  }
+
+  return pathname;
+}
+
 export function pathToRoute(pathname: string): AppRoute {
-  if (pathname === '/devices' || pathname.startsWith('/devices/')) {
+  const path = normalizePath(pathname);
+
+  if (path === '/devices' || path.startsWith('/devices/')) {
     return 'devices';
   }
 
@@ -11,7 +31,11 @@ export function pathToRoute(pathname: string): AppRoute {
 }
 
 export function routeToPath(route: AppRoute): string {
-  return route === 'devices' ? '/devices' : '/';
+  if (route === 'devices') {
+    return `${BASE}devices`;
+  }
+
+  return BASE;
 }
 
 export function useAppRouter() {

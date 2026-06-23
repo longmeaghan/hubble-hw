@@ -2,11 +2,13 @@
   "name": "hubble-hw",
   "private": true,
   "version": "0.0.1",
+  "homepage": "https://longmeaghan.github.io/hubble-hw",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && cp dist/index.html dist/404.html && gh-pages -d dist"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
@@ -20,6 +22,7 @@
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",
+    "gh-pages": "^6.3.0",
     "typescript": "~5.8.3",
     "vite": "^6.3.5"
   }
